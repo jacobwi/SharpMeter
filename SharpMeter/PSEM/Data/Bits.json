@@ -1,0 +1,36 @@
+// Jacob William
+{
+  // ===============================================================
+  // ST0
+  // ===============================================================
+  "FORMAT_CONTROL_1": {
+    "DATA_ORDER": [ 0, 0 ],
+    "CHAR_FORMAT": [ 1, 3 ],
+    "MODEL_SELECT": [ 4, 6 ],
+    "FILL": [ 7, 7 ]
+  },
+  "FORMAT_CONTROL_2": {
+    "TM_FORMAT": [ 0, 2 ],
+    "DATA_ACCESS_METHOD": [ 3, 4 ],
+    "ID_FORM": [ 5, 5 ],
+    "INT_FORMAT": [ 6, 7 ]
+  },
+  "FORMAT_CONTROL_3": {
+    "NI_FORMAT1": [ 0, 3 ],
+    "NI_FORMAT2": [ 4, 7 ]
+  },
+
+  // ===============================================================
+  // ST2
+  // ===============================================================
+  "E_ELEMENTS_BFLD": {
+    "E_FREQ": [ 0, 2 ],
+    "E_NO_OF_ELEMENTS": [ 3, 5 ],
+    "E_BASE_TYPE": [ 6, 9 ],
+    "E_ACCURACY_CLASS": [ 10, 15 ]
+  },
+  "E_VOLTS_BFLD": {
+    "E_ELEMENTS_VOLTS": [ 0, 3 ],
+    "E_ED_SUPPLY_VOLTS": [ 4, 7 ]
+  }
+}

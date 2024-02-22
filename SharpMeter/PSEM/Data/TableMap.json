@@ -1,0 +1,1277 @@
+// Jacob William
+{
+  "ST0": {
+    "ID": 0,
+    "Name": "General_Configuration_Table",
+    "Description": "Standard Table 0",
+    "Size": 94,
+    "Fields": {
+      "FORMAT_CONTROL_1_[HEADER]": {
+        "DATA_ORDER": "1,BITS,8",
+        "CHAR_FORMAT": "3,BITS,8",
+        "MODEL_SELECT": "3,BITS,8",
+        "FILLER": "1,BITS,8"
+      },
+      "FORMAT_CONTROL_2_[HEADER]": {
+        "TM_FORMAT": "3,BITS,8",
+        "DATA_ACCESS_METHOD": "2,BITS,8",
+        "ID_FORM": "1,BITS,8",
+        "INT_FORMAT": "2,BITS,8"
+      },
+      "FORMAT_CONTROL_3_[HEADER]": {
+        "NI_FORMAT1": "4,BITS,8",
+        "NI_FORMAT2": "4,BITS,8"
+      },
+      "DEVICE_CLASS": "4,STRING",
+      "NAMEPLATE_TYPE": "1,ENUM,MeterTypes",
+      "DEFAULT_SET_USED": "1,UINT",
+      "MAX_PROC_PARM_LENGTH": "1,UINT",
+      "MAX_RESP_DATA_LEN": "1,UINT",
+      "STD_VERSION_NO": "1,UINT",
+      "STD_REVISION_NO": "1,UINT",
+      "DIM_STD_TBLS_USED": "1,UINT",
+      "DIM_MFG_TBLS_USED": "1,UINT",
+      "DIM_STD_PROC_USED": "1,UINT",
+      "DIM_MFG_PROC_USED": "1,UINT",
+      "DIM_MFG_STATUS_USED": "1,UINT",
+      "NBR_PENDING": "1,UINT",
+      "STD_TBLS_USED": "15,ARRAY",
+      "MFG_TBLS_USED": "15,ARRAY",
+      "STD_PROC_USED": "3,ARRAY",
+      "MFG_PROC_USED": "12,ARRAY",
+      "STD_TBLS_WRITE": "15,ARRAY",
+      "MFG_TBLS_WRITE": "15,ARRAY"
+    }
+  },
+  "ST1": {
+    "ID": 1,
+    "Name": "GENERAL_MFG_ID_TBL",
+    "Description": "Standard Table 1",
+    "Size": 32,
+    "Fields": {
+      "MANUFACTURER": "4,STRING",
+      "ED_MODEL": "8,STRING",
+      "HW_VERSION_NUMBER": "1,INT",
+      "HW_REVISION_NUMBER": "1,INT",
+      "FW_VERSION_NUMBER": "1,INT",
+      "FW_REVISION_NUMBER": "1,INT",
+      "MFG_SERIAL_NUMBER": "16,CHAR"
+    }
+  },
+  "ST2": {
+    "ID": 2,
+    "Name": "Device_Nameplate_Table",
+    "Description": "Standard Table 2",
+    "Size": 33,
+    "Fields": {
+      "E_Kh": "6,ASCII",
+      "E_Kt": "6,ASCII",
+      "E_INPUT_SCALAR": "1,INT",
+      "E_ED_CONFIG": "5,ASCII",
+      "E_ELEMENTS_BFLD_[HEADER]": {
+        "E_FREQ": "3,BITS,16",
+        "E_NO_OF_ELEMENTS": "3,BITS,16",
+        "E_BASE_TYPE": "4,BITS,16",
+        "E_ACCURACY_CLASS": "6,BITS,16"
+      },
+      "E_VOLTS_BFLD_[HEADER]": {
+        "E_ELEMENTS_VOLTS": "4,BITS,8",
+        "E_ED_SUPPLY_VOLTS": "4,BITS,8"
+      },
+      "E_AMPS_RCD_[HEADER]": {
+        "E_CLASS_MAX_AMPS": "6,ASCII",
+        "E_TA": "6,ASCII"
+      }
+    }
+  },
+  "ST3": {
+    "ID": 3,
+    "Name": "ED_MODE_STATUS_TBL",
+    "Description": "Standard Table 3",
+    "Size": 5,
+    "Fields": {
+      "ED_MODE_[HEADER]_[FLAGS]": {
+        "METERING_FLAG": "1,BITS,8",
+        "TEST_MODE_FLAG": "1,BITS,8",
+        "METER_SHOP_MODE_FLAG": "1,BITS,8",
+        "FACTORY_FLAG": "1,BITS,8",
+        "FILLER": "4,BITS,8"
+      },
+      "ED_STD_STATUS1_[HEADER]_[FLAGS]": {
+        "UNPROGRAMMED_FLAG": "1,BITS,16",
+        "CONFIGURATION_ERROR_FLAG": "1,BITS,16",
+        "SELF_CHK_ERROR_FLAG": "1,BITS,16",
+        "RAM_FAILURE_FLAG": "1,BITS,16",
+        "ROM_FAILURE_FLAG": "1,BITS,16",
+        "NONVOL_MEM_FAILURE_FLAG": "1,BITS,16",
+        "CLOCK_ERROR_FLAG": "1,BITS,16",
+        "MEASUREMENT_ERROR_FLAG": "1,BITS,16",
+        "LOW_BATTERY_FLAG": "1,BITS,8",
+        "LOW_LOSS_POTENTIAL_FLAG": "1,BITS,16",
+        "DEMAND_OVERLOAD_FLAG": "1,BITS,16",
+        "POWER_FAILURE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "FILLER": "1,BITS,16"
+      },
+      "ED_STD_STATUS2_[HEADER]_[FLAGS]": {
+        "FILLER1": "1,BITS,8",
+        "FILLER2": "1,BITS,8",
+        "FILLER3": "1,BITS,8",
+        "FILLER4": "1,BITS,8",
+        "FILLER5": "1,BITS,8",
+        "FILLER6": "1,BITS,8",
+        "FILLER7": "1,BITS,8",
+        "FILLER8": "1,BITS,8"
+      },
+      "ED_MFG_STATUS_[HEADER]_[FLAGS]": {
+        "DSP_ERROR": "1,BITS,8",
+        "TIME_CHANGED": "1,BITS,8",
+        "SYSTEM_ERROR": "1,BITS,8",
+        "RECEIVED_KWH": "1,BITS,8",
+        "LEADING_KVARH": "1,BITS,8",
+        "LOSS_OF_PROGRAM": "1,BITS,8",
+        "HIGH_TEMPERATURE": "1,BITS,8",
+        "FILLER": "1,BITS,8"
+      }
+    }
+  },
+
+  // ST4 TODO
+
+  "ST5": {
+    "ID": 5,
+    "Name": "DEVICE_IDENT_TBL",
+    "Description": "Standard Table 5",
+    "Size": 20,
+    "Fields": {
+      "METER_ID": "20,CHAR"
+    }
+  },
+  "ST8": {
+    "ID": 8,
+    "Name": "PROC_RESPONSE_TBL",
+    "Description": "Standard Table 8",
+    "Size": 16,
+    "Fields": {
+      "PROC_[HEADER]": {
+        "TBL_PROC_NBR": "11,BITS,16",
+        "MFG_FLAG": "1,BITS,16",
+        "SELECTOR": "4,BITS,16"
+      },
+      "SEQ_NBR": "1,BYTE",
+      "RESULT_CODE": "1,BYTE",
+      "RESP_DATA": "12,STRING"
+    }
+  },
+  "ST11": {
+    "ID": 11,
+    "Name": "ACT_SOURCES_LIM_TBL",
+    "Description": "Standard Table 11",
+    "Size": 8,
+    "Fields": {
+      "SOURCE_FLAGS_[HEADER]": {
+        "PF_EXCLUDE_FLAG": "1,BITS,8",
+        "RESET_EXCLUDE_FLAG": "1,BITS,8",
+        "BLOCK_DEMAND_FLAG": "1,BITS,8",
+        "SLIDING_DEMAND_FLAG": "1,BITS,8",
+        "THERMAL_DEMAND_FLAG": "1,BITS,8",
+        "SET1_PRESENT_FLAG": "1,BITS,8",
+        "SET2_PRESENT_FLAG": "1,BITS,8",
+        "CONVERSION_ALG_FLAG": "1,BITS,8"
+      },
+      "NBR_UOM_ENTRIES": "1,BYTE",
+      "NBR_DEMAND_CTRL_ENTRIES": "1,BYTE",
+      "DATA_CTRL_LENGTH": "1,BYTE",
+      "NBR_DATA_CTRL_ENTRIES": "1,BYTE",
+      "NBR_CONSTANTS_ENTRIES": "1,BYTE",
+      "CONSTANTS_SELECTOR": "1,BYTE",
+      "NBR_SOURCES": "1,BYTE"
+    }
+  },
+  "ST13": {
+    "ID": 13,
+    "Name": "DEMAND_CONTROL_TBL",
+    "Description": "Standard Table 13",
+    "Size": 14,
+    "Fields": {
+      "RESET_EXCLUSION": "1,BYTE",
+      "P_FAIL_RECOGNITION_TM": "1,BYTE",
+      "P_FAIL_EXCLUSION": "1,BYTE",
+      "COLD_LOAD_PICKUP": "1,BYTE",
+      "INTERVAL_VALUE[0]_[HEADER]": {
+        "SUB_INT": "1,BYTE",
+        "INT_MULTIPIER": "1,BYTE"
+      },
+      "INTERVAL_VALUE[1]_[HEADER]": {
+        "SUB_INT": "1,BYTE",
+        "INT_MULTIPIER": "1,BYTE"
+      },
+      "INTERVAL_VALUE[2]_[HEADER]": {
+        "SUB_INT": "1,BYTE",
+        "INT_MULTIPIER": "1,BYTE"
+      },
+      "INTERVAL_VALUE[3]_[HEADER]": {
+        "SUB_INT": "1,BYTE",
+        "INT_MULTIPIER": "1,BYTE"
+      },
+      "INTERVAL_VALUE[4]_[HEADER]": {
+        "SUB_INT": "1,BYTE",
+        "INT_MULTIPIER": "1,BYTE"
+      }
+    }
+  },
+  "ST14": {
+    "ID": 14,
+    "Name": "DATA_CONTROL_TBL",
+    "Description": "Standard Table 14",
+    "Size": 124,
+    "Fields": {
+      "SOURCES_ID[0]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[1]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[2]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[3]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[4]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[5]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[6]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[7]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[8]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[9]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[10]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[11]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[12]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[13]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[14]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[15]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[16]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[17]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[18]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[19]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[20]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[21]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[22]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[23]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[24]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[25]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[26]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[27]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[28]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[29]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[30]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[31]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[32]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[33]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[34]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[35]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[36]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[37]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[38]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[39]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[40]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[41]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[42]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[43]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[44]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[45]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[46]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[47]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[48]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[49]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[50]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[51]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[52]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[53]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[54]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[55]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[56]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[57]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[58]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[59]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[60]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      },
+      "SOURCES_ID[61]_[HEADER]": {
+        "SOURCE_ID": "2,BYTE"
+      }
+    }
+  },
+  "ST52": {
+    "ID": 52,
+    "Name": "CLOCK_TBL",
+    "Description": "Standard Table 52",
+    "Size": 7,
+    "Fields": {
+      "CLOCK_CALENDAR_[HEADER]": {
+        "YEAR": "1,INT,TIME",
+        "MONTH": "1,INT,TIME",
+        "DAY": "1,INT,TIME",
+        "HOUR": "1,INT,TIME",
+        "MINUTE": "1,INT,TIME",
+        "SECOND": "1,INT,TIME"
+      },
+      "TIME_DATE_QUAL_[HEADER]": {
+        "DAY_OF_WEEK": "3,BITS,8",
+        "DST_FLAG": "1,BITS,8",
+        "GMT_FLAG": "1,BITS,8",
+        "TM_ZN_APPLIED_FLAG ": "1,BITS,8",
+        "DST_APPLIED_FLAG": "1,BITS,8",
+        "DST_SUPPORTED_FLAG": "1,BITS,8"
+      }
+    }
+  },
+  "ST53": {
+    "ID": 53,
+    "Name": "CLOCK_TBL",
+    "Description": "Standard Table 53",
+    "Size": 7,
+    "Fields": {
+      "DST_TIME_EFF_[HEADER]": {
+        "Hours": "1,BYTE",
+        "Minutes": "1,BYTE",
+        "Seconds": "1,BYTE"
+      },
+      "DST_TIME_AMT": "1,BYTE",
+      "TIME_ZONE_OFFSET": "2,BYTE"
+    }
+  },
+
+  // ===============================================================
+  // MTs
+  // ===============================================================
+  // ===============================================================
+  // MTs
+  // ===============================================================
+  // ===============================================================
+  // MTs
+  // ===============================================================
+  "MT0": {
+    "ID": 2048,
+    "Name": "DEVICE_TBL",
+    "Description": "MT 0",
+    "Size": 73,
+    "Fields": {
+      "MFG_VERSION_NBR": "1,BYTE",
+      "MFG_REVISION_NBR": "1,BYTE",
+      "ROM_CONST_DATA_[HEADER]": {
+        "PART_NUMBER": "5,ASCII",
+        "FW_VERSION": "1,BYTE",
+        "FW_REVISION": "1,BYTE",
+        "FW_BUILD": "1,BYTE",
+        "MFG_TEST_VECTOR1": "4,ASCII"
+      },
+      "METER_TYPE": "1,BYTE",
+      "METER_MODE": "1,BYTE",
+      "REGISTER_FUNCTION": "1,BYTE",
+      "INSTALLED_OPTION1": "1,BYTE",
+      "INSTALLED_OPTION2": "1,BYTE",
+      "INSTALLED_OPTION3": "1,BYTE",
+      "INSTALLED_OPTION4": "1,BYTE",
+      "INSTALLED_OPTION5": "1,BYTE",
+      "INSTALLED_OPTION6": "1,BYTE",
+      "UPGRADES_BFLD_[HEADER]": {
+        "UPGRADE_0 [TOU]": "1,BITS,32",
+        "UPGRADE_1 [SECOND MEASURE]": "1,BITS,32",
+        "UPGRADE_2 [RECORDING]": "1,BITS,32",
+        "UPGRADE_3 [EVENT LOG]": "1,BITS,32",
+        "UPGRADE_4 [AMI-AT]": "1,BITS,32",
+        "UPGRADE_5 [DSP]": "1,BITS,32",
+        "UPGRADE_6 [Pulse Initiator Output]": "1,BITS,32",
+        "UPGRADE_7 [DEMAND CALC]": "1,BITS,32",
+        "UPGRADE_8 [20-channel Recording/Self-read]": "1,BITS,32",
+        "UPGRADE_9 [Transformer Loss Compensation]": "1,BITS,32",
+        "UPGRADE_10 [Transformer Loss Compensation]": "1,BITS,32",
+        "UPGRADE_11 [Revenue Guard Plus]": "1,BITS,32",
+        "UPGRADE_12 [VOLTAGE EVENT]": "1,BITS,32",
+        "UPGRADE_13 [Bi-directional Measurements]": "1,BITS,32",
+        "UPGRADE_14 [Waveform Capture]": "1,BITS,32",
+        "UPGRADE_15 [Expanded Measure]": "1,BITS,32",
+        "UPGRADE_16 [VOLTAGE MEASURE]": "1,BITS,32",
+        "UPGRADE_17 [Totalization]": "1,BITS,32",
+        "UPGRADE_18 [Huge 20-channel Recording/Self-reads]": "1,BITS,32",
+        "UPGRADE_19": "1,BITS,32",
+        "UPGRADE_20": "1,BITS,32",
+        "UPGRADE_21": "1,BITS,32",
+        "UPGRADE_22": "1,BITS,32",
+        "UPGRADE_23 [ECP]": "1,BITS,32",
+        "UPGRADE_24 [DLP]": "1,BITS,32",
+        "UPGRADE_25 [PPM]": "1,BITS,32",
+        "UPGRADE_26 [Mag Tamper]": "1,BITS,32",
+        "FILLER": "4,BITS,32"
+      },
+      "RESERVED": "4,BYTES",
+      "TDK_CONST_RCD_[HEADER]": {
+        "PART_NUMBER": "5,ASCII",
+        "FW_VERSION": "1,BYTE",
+        "FW_REVISION": "1,BYTE",
+        "FW_BUILD": "1,BYTE"
+      },
+      "PATCH_ENABLED_FLAG": "1,BYTE",
+      "PATCH_ACTIVE_FLAG": "1,BYTE",
+      "PATCH_CONST_RCD_[HEADER]": {
+        "PART_NUMBER": "5,ASCII",
+        "FW_VERSION": "1,BYTE",
+        "FW_REVISION": "1,BYTE",
+        "FW_BUILD": "1,BYTE",
+        "FW_EEPROM_VERSION": "1,BYTE",
+        "PATCH_VERSION": "1,BYTE",
+        "PATCH_REVISION": "1,BYTE",
+        "PATCH_BUILD": "1,BYTE",
+        "PATCH_EEPROM_VERSION": "1,BYTE",
+        "PATCH_FLAGS": "1,BYTE",
+        "CHECKSUM": "2,BYTE"
+      },
+      "BASE_CRC": "4,BYTE",
+      "EEPROCM_VER": "1,BYTE",
+      "PATCH_CRC_CALCULATED": "2,BYTE",
+      "PATCH_CRC_DOWNLOADED": "2,BYTE",
+      "LP_MEM_SIZE": "3,BYTE",
+      "PATCH_CODE_START_ADDRESS": "4,BYTE"
+    }
+  },
+  "MT64": {
+    "ID": 2112,
+    "Name": "CFG_CONSTANTS_TBL",
+    "Description": "MT 64",
+    "Size": 104,
+    "Fields": {
+      "DSP_CFG_DATA_RCD_[HEADER]": {
+        "Equation": "4,BITS,8,ENUM",
+        "LINE_FREQUENCY": "1,BITS,8,ENUM",
+        "PULSE_ENABLE": "1,BITS,8,ENUM",
+        "PULSE_TYPE": "1,BITS,8,ENUM",
+        "FILLER": "1,BITS,8"
+      },
+      "KT": "4,BYTE",
+      "SCALE_FACTORS_[HEADER]": {
+        "V_SQR_HR_SF": "2,BYTE",
+        "V_RMS_SF": "2,BYTE",
+        "I_SQR_HR_SF": "3,BYTE",
+        "VA_SF": "3,BYTE",
+        "VAH_SF": "2,BYTE"
+      },
+      "CREEP_THRESHOLD": "2,BYTE",
+      "ANSI_FORM": "5,BYTE",
+      "METER_BASE": "1,BYTE",
+      "MAX_CLASS_AMPS": "2,BYTE",
+      "ELEMENT_VOLTS": "1,BYTE",
+      "HARDWARE_VERSION_NUMBER": "1,BYTE",
+      "HARDWARE_REVSION_NUMBER": "1,BYTE",
+      "MFG_SERIAL_ID": "16,BYTE",
+      "ENCRYPTED_SERIAL_ID": "16,BYTE",
+      "WRATE": "4,BYTE",
+      "POWER_FAIL_SAG_THRESHOLD": "4,BYTE",
+      "POWER_FAIL_SAG_COUNT": "4,BYTE",
+      "POWER_UP_SAG_THRESHOLD": "4,BYTE",
+      "POWER_UP_SAG_COUNT": "4,BYTE",
+      "PULSE_CONFIG_[HEADER]": {
+        "PULSE_SLOW": "1,BITS,8",
+        "PULSE_FAST": "1,BITS,8",
+        "FILLER": "6,BITS,8"
+      },
+      "TEMP_COEFF_B": "2,BYTE",
+      "CAL_BIT": "1,BYTE",
+      "DC_DETECT_THRESH": "4,BYTE",
+      "DC_DETECT_PERCENT": "1,BYTE",
+      "DC_COUNT_SETTING": "2,BYTE",
+      "PPMC": "2,BYTE",
+      "PPMC2": "2,BYTE",
+      "PLS_MAXWIDTH": "1,BYTE",
+      "PLS_INTERVAL": "1,BYTE",
+      "RCDC_CONFIG_[HEADER]": {
+        "RCDC_SWITCH_PRESENT": "1,BITS,8",
+        "RCDC_MANUAL_ACK_PRESENT": "1,BITS,8",
+        "FILLER": "6,BITS,8"
+      },
+      "BASE_VOLTAGE_VREF": "2,BYTE",
+      "I_RMS_SF": "2,BYTE",
+      "MAG_TAMPER_DETECT_THRESHOLD": "4,BYTE",
+      "MAG_TAMPER_DROPOUT_ADJUST": "4,BYTE"
+    }
+  },
+  "MT65": {
+    "ID": 2113,
+    "Name": "CALCULATION_CORRECTION_FACTORS_TBL",
+    "Description": "MT 65",
+    "Size": 41,
+    "Fields": {
+      "CAL_IA": "4,DOUBLE",
+      "CAL_VA": "4,DOUBLE",
+      "CAL_IB": "4,DOUBLE",
+      "CAL_VB": "4,DOUBLE",
+      "CAL_IC": "4,DOUBLE",
+      "CAL_VC": "4,DOUBLE",
+      "PHASE_ADJ_A": "4,UINT",
+      "PHASE_ADJ_B": "4,UINT",
+      "PHASE_ADJ_C": "4,UINT",
+      "TEMP_NOM": "4,UINT",
+      "CAL_TEMPERATURE": "1,BYTE"
+    }
+  },
+  "MT66": {
+    "ID": 2114,
+    "Name": "PROGRAM_CONSTANTS1_TBL",
+    "Description": "MT 66",
+    "Size": 6,
+    "Fields": {
+      "FREQUENCY": "1,ENUM,LINE_FREQUENCY",
+      "TIME_BASE": "1,ENUM,TIME_BASE",
+      "KT": "4,UINT"
+    }
+  },
+  "MT67": {
+    "ID": 2115,
+    "Name": "PROGRAM_CONSTANTS2_TBL",
+    "Description": "MT 67",
+    "Size": 188,
+    "Fields": {
+      "ENERGY_WRAPTEST_CONST_[HEADER]": {
+        "ENERGY_WRAPTEST_CONST[0]": "6,BYTE",
+        "ENERGY_WRAPTEST_CONST[1]": "6,BYTE",
+        "ENERGY_WRAPTEST_CONST[2]": "6,BYTE",
+        "ENERGY_WRAPTEST_CONST[3]": "6,BYTE"
+      },
+      "RESERVED1": "92,BYTE",
+      "DEMAND_WRAPTEST_CONST_[HEADER]": {
+        "DEMAND_WRAPTEST_CONST[0]": "6,BYTE",
+        "DEMAND_WRAPTEST_CONST[1]": "6,BYTE",
+        "DEMAND_WRAPTEST_CONST[2]": "6,BYTE",
+        "DEMAND_WRAPTEST_CONST[3]": "6,BYTE"
+      },
+      "RESERVED2": "6,BYTE",
+      "CUR_TRANS_RATIO": "2,BYTE",
+      "POT_TRANS_RATIO": "2,BYTE",
+      "PROGRAM_ID": "2,BYTE",
+      "USER_DEFINED_FIELD1": "6,BYTE",
+      "USER_DEFINED_FIELD2": "6,BYTE",
+      "USER_DEFINED_FIELD3": "6,BYTE",
+      "P_FAIL_RECOGNITION_TIME": "2,BYTE",
+      "LP_OUTAGE_DURATION": "2,BYTE",
+      "DEMAND_RESET_TIMEOUT": "4,BYTE",
+      "DEFAULT_TOU_RATE": "1,BYTE",
+      "OUTAGE_RECOVERY_ENABLED": "1,BYTE",
+      "PWR_RESTORATION_DURATION": "1,BYTE",
+      "ENERGY_ACCUM_DIGITS": "1,BYTE",
+      "AVERAGE_VOLTAGE_SUM_INTERVAL": "2,BYTE"
+    }
+  },
+
+  "MT68": {
+    "ID": 2116,
+    "Name": "ERROR_CAUTION_CONTROL_TBL",
+    "Description": "MT 68",
+    "Size": 59,
+    "Fields": {
+      "ERROR_FREEZE_[HEADER]": {
+        "METERING_ERROR": "1,BITS,8",
+        "OPTION_BRD": "1,BITS,8",
+        "WATCHDOG_TIMEOUT": "1,BITS,8",
+        "RAM": "1,BITS,8",
+        "ROM": "1,BITS,8",
+        "EEPROM": "1,BITS,8",
+        "BATT_POT_FAIL": "1,BITS,8",
+        "DAP [NOT USED]": "1,BITS,8"
+      },
+      "CAUTION_ENABLE_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "CAUTION_DISPLAY_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "CAUTION_FREEZE_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "DMD_OVERLOAD_THRESH": "4,BYTES",
+      "RESERVED": "1,BYTES",
+      "MIN_NBR_BAD_PASSWORDS": "1,BYTES",
+      "PHA_VOLT_TOLERANCE": "1,BYTES",
+      "SERVICE_ERRPR_DETECT_ENABLE": "1,BYTES",
+      "SERVICE_MIN_VOLTAGE": "2,BYTES",
+      "SERVICE_MAX_VOLTAGE": "2,BYTES",
+      "HIGH_TEMP_THRESHOLD": "1,BYTES",
+      "PASSWORD_LOCKOUT_DURATION": "1,BYTES",
+      "RELAY_STATE_CHANGE_ENABLE_BFLD": "1,BYTES",
+      "CAUTION_ENABLE_2": "1,BYTES",
+      "RECEIVED_WH_THRESHOLD": "4,BYTES",
+      "LEADING_VARH_THRESHOLD": "4,BYTES",
+      "CURRENT_IMBALANCE_MIN_I": "1,BYTES",
+      "CURRENT_IMBALANCE_PERCENT": "1,BYTES",
+      "CURRENT_IMBALANCE_DURATION": "1,BYTES",
+      "MAG_TAMPER_DETECT_DURATION": "1,BYTES"
+    }
+  },
+
+  "MT69": {
+    "ID": 2117,
+    "Name": "ERROR_HISTORY_TBL",
+    "Description": "MT 69",
+    "Size": 31,
+    "Fields": {
+      "ERROR_HISTORY_[HEADER]": {
+        "METER_CHIP_ERROR": "1,BITS,8",
+        "OPTION_BRD": "1,BITS,8",
+        "WATCHDOG_TIMEOUT": "1,BITS,8",
+        "RAM": "1,BITS,8",
+        "ROM": "1,BITS,8",
+        "EEPROM": "1,BITS,8",
+        "BATT_POT_FAIL": "1,BITS,8",
+        "MEASUREMENT_ERROR": "1,BITS,8"
+      },
+      "METERING_ERROR_[HEADER]": {
+        "METER_CHIP_ERROR_1": "1,BITS,8",
+        "METER_CHIP_COMM_ERROR": "1,BITS,8",
+        "METER_CHIP_ERROR_2": "1,BITS,8",
+        "METER_CHIP_MOM_INT_TIMEOUT": "1,BITS,8",
+        "METER_CHIP_ERROR3": "1,BITS,8",
+        "METER_CHIP_OVERRUN": "1,BITS,8",
+        "METER_CHIP_OVERFLOW": "1,BITS,8",
+        "METER_CHIP_ZERO_CROSS": "1,BITS,8"
+      },
+      "METERING_ERROR_HISTORY": "1,BYTE",
+
+      "CAUTION_HISTORY_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "EEPROM_ERRORS_2_[HEADER]": {
+        "LP_DATA_ERROR": "1,BITS,8",
+        "LOAD_CONTROL_BIT_ERROR": "1,BITS,8",
+        "FILLER": "6,BITS,8"
+      },
+      "EEPROM_ERROR_2_HISTORY_[HEADER]": {
+        "METER_CHIP_ERROR": "1,BITS,8",
+        "OPTION_BRD": "1,BITS,8",
+        "WATCHDOG_TIMEOUT": "1,BITS,8",
+        "RAM": "1,BITS,8",
+        "ROM": "1,BITS,8",
+        "EEPROM": "1,BITS,8",
+        "BATT_POT_FAIL": "1,BITS,8",
+        "MEASUREMENT_ERROR": "1,BITS,8"
+      },
+      "ROM_FLASH_ERRORS_[HEADER]": {
+        "ROM_CODE_ERROR": "1,BITS,8",
+        "FLASH_CODE_ERROR": "1,BITS,8",
+        "USER_DEF_CALC_ERROR": "1,BITS,8",
+        "FILLER": "5,BITS,8"
+      },
+      "ROM_FLASH_ERROR_HISTORY_[HEADER]": {
+        "ROM_CODE_ERROR": "1,BITS,8",
+        "FLASH_CODE_ERROR": "1,BITS,8",
+        "USER_DEF_CALC_ERROR": "1,BITS,8",
+        "FILLER": "5,BITS,8"
+      },
+      "EEPROM_ERRORS_1_[HEADER]": {
+        "POWER_FAIL_SEGMENT_ERROR": "1,BITS,8",
+        "CONFIG_SEGMENT_ERROR": "1,BITS,8",
+        "PROGRAM_SEGMENT0_ERROR": "1,BITS,8",
+        "PROGRAM_SEGMENT1_ERROR": "1,BITS,8",
+        "CURR_REV_SEGMENT0_ERROR": "1,BITS,8",
+        "CURR_REV_SEGMENT1_ERROR": "1,BITS,8",
+        "STATIC_REV_SEGMENT_ERROR": "1,BITS,8",
+        "EVENT_LOG_DATA_ERROR": "1,BITS,8"
+      },
+      "EEPROM_ERROR_1_HISTORY_[HEADER]": {
+        "POWER_FAIL_SEGMENT_ERROR": "1,BITS,8",
+        "CONFIG_SEGMENT_ERROR": "1,BITS,8",
+        "PROGRAM_SEGMENT0_ERROR": "1,BITS,8",
+        "PROGRAM_SEGMENT1_ERROR": "1,BITS,8",
+        "CURR_REV_SEGMENT0_ERROR": "1,BITS,8",
+        "CURR_REV_SEGMENT1_ERROR": "1,BITS,8",
+        "STATIC_REV_SEGMENT_ERROR": "1,BITS,8",
+        "EVENT_LOG_DATA_ERROR": "1,BITS,8"
+      },
+      "FLASH_SECTOR_ERRORS [NOT USED]": "4,BYTE",
+      "FLASH_SECTOR_ERROR_HISTORY [NOT USED]": "4,BYTE",
+      "ROLLING_STATUS_ERROR_[HEADER]": {
+        "DSP_ERROR": "1,BITS,8",
+        "OPTION_BRD": "1,BITS,8",
+        "SYSTEM": "1,BITS,8",
+        "RAM": "1,BITS,8",
+        "ROM": "1,BITS,8",
+        "EEPROM": "1,BITS,8",
+        "BATT_POT_FAIL": "1,BITS,8",
+        "MEASUREMENT_ERROR": "1,BITS,8"
+      },
+      "ROLLING_STATUS_CAUTION_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "DIAG0": "1,BYTE",
+
+      "DAILY_STATUS_ERROR_[HEADER]": {
+        "DSP_ERROR": "1,BITS,8",
+        "OPTION_BRD": "1,BITS,8",
+        "SYSTEM": "1,BITS,8",
+        "RAM": "1,BITS,8",
+        "ROM": "1,BITS,8",
+        "EEPROM": "1,BITS,8",
+        "BATT_POT_FAIL": "1,BITS,8",
+        "MEASUREMENT_ERROR": "1,BITS,8"
+      },
+      "DAILY_STATUS_CAUTION_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "DIAG1": "1,BYTE",
+
+      "REAL_TIME_STATUS_ERROR_[HEADER]": {
+        "DSP_ERROR": "1,BITS,8",
+        "OPTION_BRD": "1,BITS,8",
+        "SYSTEM": "1,BITS,8",
+        "RAM": "1,BITS,8",
+        "ROM": "1,BITS,8",
+        "EEPROM": "1,BITS,8",
+        "BATT_POT_FAIL": "1,BITS,8",
+        "MEASUREMENT_ERROR": "1,BITS,8"
+      },
+      "REAL_TIME_STATUS_CAUTION_[HEADER]": {
+        "LOW_BATTERY": "1,BITS,16",
+        "LOW_POTENTIAL": "1,BITS,16",
+        "DMD_THRESH_OVERLOAD": "1,BITS,16",
+        "RECEIVED_KWH": "1,BITS,16",
+        "LEADING_KVAH": "1,BITS,16",
+        "UNPROGRAMMED": "1,BITS,16",
+        "LOSS_OF_PROGRAM": "1,BITS,16",
+        "TIME_CHANGED": "1,BITS,16",
+        "BAD_PASSWORD": "1,BITS,16",
+        "DC_DETECTED": "1,BITS,16",
+        "HIGH_TEMPERATURE": "1,BITS,16",
+        "CURRENT_IMBALANCE_FLAG": "1,BITS,16",
+        "TAMPER_DETECT_FLAG": "1,BITS,16",
+        "COVER_DETECT_FLAG": "1,BITS,16",
+        "MAGNETIC_TAMPER_DETECT_FLAG": "1,BITS,16",
+        "HIGH_LINE_CURR_DETECT_FLAG": "1,BITS,16"
+      },
+      "DIAG2": "1,BYTE"
+    }
+  },
+
+  "MT70": {
+    "ID": 2118,
+    "Name": "ERROR_CAUTION_CONTROL_TBL",
+    "Description": "MT 70",
+    "Size": 47,
+    "Fields": {
+      "DATE_FORMAT": "1,BYTE",
+      "SUPPRESS_LEAD_ZEROS": "1,BYTE",
+      "DISP_SCALAR": "1,BYTE",
+      "DEMAND_DISP_UNITS": "1,BYTE",
+      "PRIMARY_DISPLAY_[HEADER]": {
+        "VOLT_CURRENT": "1,BITS,8",
+        "MEASUREMENT": "1,BITS,8",
+        "FILLER": "6,BITS,8"
+      },
+      "DISP_MULTIPLIER": "4,BYTE",
+      "CUM_DMD_DIGITS_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+      "DEMAND_DIGITS_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+      "ENERGY_DIGITS_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+      "FIXED_PT_FMT1_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+      "FIXED_PT_FMT2_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+      "NUMERIC_FMT1_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+
+      "NUMERIC_FMT2_[HEADER]": {
+        "NBR_RIGHT_DIGITS": "4,BITS,8",
+        "NBR_LEFT_DIGITS": "4,BITS,8"
+      },
+      "USER_DEFINED_LABEL[0]": "6,BYTE",
+      "USER_DEFINED_LABEL[1]": "6,BYTE",
+      "USER_DEFINED_LABEL[2]": "6,BYTE",
+      "USER_DEFINED_LABEL[3]": "6,BYTE",
+      "NETWORK_STATUS_INFO": "6,BYTE",
+      "MULTIPLY_DISPLAY_BY": "1,BYTE"
+    }
+  },
+
+  "MT71": {
+    "ID": 2119,
+    "Name": "LINE_SIDE_DIAG_CONFIG_TBL",
+    "Description": "MT 71",
+    "Size": 25,
+    "Fields": {
+      "DIAG_ENABLE_[HEADER]": {
+        "DIAG_1": "1,BITS,8",
+        "DIAG_2": "1,BITS,8",
+        "DIAG_3": "1,BITS,8",
+        "DIAG_4": "1,BITS,8",
+        "DIAG_5": "1,BITS,8",
+        "DIAG_6": "1,BITS,8",
+        "DIAG_7": "1,BITS,8",
+        "DIAG_8": "1,BITS,8"
+      },
+      "DIAG_DISPLAY_[HEADER]": {
+        "DIAG_1": "1,BITS,8",
+        "DIAG_2": "1,BITS,8",
+        "DIAG_3": "1,BITS,8",
+        "DIAG_4": "1,BITS,8",
+        "DIAG_5": "1,BITS,8",
+        "DIAG_6": "1,BITS,8",
+        "DIAG_7": "1,BITS,8",
+        "DIAG_8": "1,BITS,8"
+      },
+      "DIAG_FREEZE_[HEADER]": {
+        "DIAG_1": "1,BITS,8",
+        "DIAG_2": "1,BITS,8",
+        "DIAG_3": "1,BITS,8",
+        "DIAG_4": "1,BITS,8",
+        "DIAG_5": "1,BITS,8",
+        "DIAG_6": "1,BITS,8",
+        "DIAG_7": "1,BITS,8",
+        "DIAG_8": "1,BITS,8"
+      },
+      "DIAG_TRIGGER_OUTPUT_[HEADER]": {
+        "DIAG_1": "1,BITS,8",
+        "DIAG_2": "1,BITS,8",
+        "DIAG_3": "1,BITS,8",
+        "DIAG_4": "1,BITS,8",
+        "DIAG_5": "1,BITS,8",
+        "DIAG_6": "1,BITS,8",
+        "DIAG_7": "1,BITS,8",
+        "DIAG_8": "1,BITS,8"
+      },
+      "PHA_VOLT_TOLERANCE": "1,BYTE",
+      "LOW_CURR_THRESHOLD": "2,BYTE",
+      "CURR_ANGLE_TOLERANCE": "2,BYTE",
+      "DISTORTION_TOLERANCE": "1,BYTE",
+      "PHA_VOLT_REFERENCE": "2,BYTE",
+      "PHA_VOLT_SAG_TOLERANCE": "1,BYTE",
+      "PHA_VOLT_SWELL_TOLERANCE": "1,BYTE",
+      "HIGH_NEUTRAL_CURR_THRESH": "2,BYTE",
+      "DIAG_5_CONFIG_[HEADER]": {
+        "DISTORTION": "3,BITS,8",
+        "FILLER": "5,BITS,8"
+      },
+      "DIAGS_6_7_DURATION": "2,BYTE",
+      "OTHER_DIAGS_DURATION": "2,BYTE",
+      "DIAG_2_DURATION": "2,BYTE",
+      "HIGH_LINE_CURR_THRESHOLD": "2,BYTE"
+    }
+  },
+
+  // TODO: MT72
+
+  "MT74": {
+    "ID": 2122,
+    "Name": "TEST_MODE_CFG_TBL",
+    "Description": "MT 74",
+    "Size": 4,
+    "Fields": {
+      "TEST_MODE_TIMEOUT": "2,BYTE",
+      "SUB_INT": "1,BYTE",
+      "INT_MULTIPLIER": "1,BYTE"
+    }
+  },
+
+  "MT75": {
+    "ID": 2123,
+    "Name": "SCALE_FACTORS_TBL",
+    "Description": "MT 75",
+    "Size": 12,
+    "Fields": {
+      "V_SQR_HR_LN_SF": "2,BYTE",
+      "V_SQR_HR_LL_SF": "2,BYTE",
+      "I_SQR_HR_SF": "3,BYTE",
+      "VA_SF": "3,BYTE",
+      "VAH_SF": "2,BYTE"
+    }
+  },
+
+  "MT76": {
+    "ID": 2124,
+    "Name": "IO_OPTBD_CONTROL_TBL",
+    "Description": "MT 76",
+    "Size": 20,
+    "Fields": {
+      "DMD_ALERT_THRESH": "4,BYTE",
+      "DMD_ALERT_TOU_TYPE": "1,BYTE",
+      "DMD_ALERT_TOU_RATE": "1,BYTE",
+      "PF_THRESH": "1,BYTE",
+      "PF_kW_DMD_THRESH": "4,BYTE",
+      "PF_ALERT_TOU_TYPE": "1,BYTE",
+      "PF_ALERT_TOU_RATE": "1,BYTE",
+      "EOI_DURATION": "1,BYTE",
+      "RTP_LC_SWITCH": "1,BYTE",
+      "RTP_TOU_RATE": "1,BYTE",
+      "RTP_ACT_DELAY": "1,BYTE",
+      "RATE_ALERT_TOU_RATE": "1,BYTE",
+      "DEMAND_ALERT_THRESH_SOURCE": "1,BYTE",
+      "PF_ALERT_THRESH_SOURCE": "1,BYTE"
+    }
+  },
+
+  "MT85": {
+    "ID": 2133,
+    "Name": "STATE_TBL",
+    "Description": "MT 85",
+    "Size": 4,
+    "Fields": {
+      "SECURITY_CODE_RECOVERY_FLAG": "1,BYTE",
+      "LC_STATE": "1,BYTE",
+      "RTP_STATE": "1,BYTE",
+      "CURRENT_ACCESS_LEVEL": "1,ENUM,AccessLevel"
+    }
+  },
+
+  "MT115": {
+    "ID": 2163,
+    "Name": "LOAD_CTRL_TBL",
+    "Description": "MT 115",
+    "Size": 26,
+    "Fields": {
+      "LC_STATUS_FLAGS_[HEADER]": {
+        "COMM_ERROR": "1,BITS,16",
+        "SWITCH_CONTROLLER_ERROR": "1,BITS,16",
+        "SWITCH_FAILED_TO_CLOSE": "1,BITS,16",
+        "ALTERNATE_SOURCE": "1,BITS,16",
+        "UNUSED": "1,BITS,16",
+        "BYPASSED": "1,BITS,16",
+        "SWITCH_FAILED_TO_OPEN": "1,BITS,16",
+        "PPM_ALERT": "1,BITS,16",
+        "MANUAL_ARM_TIMED_OUT": "1,BITS,16",
+        "LC_MEMORY_ERROR": "1,BITS,16",
+        "FILLER": "6,BITS,16"
+      },
+      "LC_STATUS_HISTORY_[HEADER]": {
+        "COMM_ERROR": "1,BITS,16",
+        "SWITCH_CONTROLLER_ERROR": "1,BITS,16",
+        "SWITCH_FAILED_TO_CLOSE": "1,BITS,16",
+        "ALTERNATE_SOURCE": "1,BITS,16",
+        "UNUSED": "1,BITS,16",
+        "BYPASSED": "1,BITS,16",
+        "SWITCH_FAILED_TO_OPEN": "1,BITS,16",
+        "PPM_ALERT": "1,BITS,16",
+        "MANUAL_ARM_TIMED_OUT": "1,BITS,16",
+        "LC_MEMORY_ERROR": "1,BITS,16",
+        "FILLER": "6,BITS,16"
+      },
+      "RCDC_STATE_[HEADER]": {
+        "ACTUAL_SWITCH_STATE": "1,BITS,8",
+        "DESIRED_SWITCH_STATE": "1,BITS,8",
+        "OPEN_HOLD_FOR_COMMAND": "1,BITS,8",
+        "WAITING_TO_ARM": "1,BITS,8",
+        "ARMED_FOR_CLOSURE": "1,BITS,8",
+        "OUTAGE_OPEN_IN_EFFECT": "1,BITS,8",
+        "LOCKOUT_IN_EFFECT": "1,BITS,8",
+        "RESERVED": "1,BITS,8"
+      },
+      "LC_STATE_[HEADER]": {
+        "RESERVED": "1,BITS,8",
+        "ECP_STATE": "1,BITS,8",
+        "DLP_STATE": "1,BITS,8",
+        "PPM_STATE": "1,BITS,8",
+        "FILLER": "1,BITS,8",
+        "ECP_DISCONNECT": "1,BITS,8",
+        "DLP_DISCONNECT": "1,BITS,8",
+        "PPM_DISCONNECT": "1,BITS,8"
+      },
+      "LC_RECONNECT_ATTEMPT_COUNT": "1,BYTE",
+      "ECP_OR_PPM_ACCUM": "6,BYTE",
+      "LC_DEMAND": "4,BYTE",
+      "RCDC_SWITCH_COUNT": "2,BYTE",
+      "FILLER": "3,BYTE",
+      "CRC": "2,BYTE"
+    }
+  },
+  "MT116": {
+    "ID": 2164,
+    "Name": "RCDC_SWITCH_CFG_TBL",
+    "Description": "MT 116",
+    "Size": 3,
+    "Fields": {
+      "LINE_PERIOD_TOLERANCE": "1,BYTE",
+      "LINE_LOAD_TOLERANCE": "1,BYTE",
+      "SWITCH_ACTUATION_DELAY": "1,BYTE"
+    }
+  },
+  "MT117": {
+    "ID": 2165,
+    "Name": "RCDC_SWITCH_STATUS_TBL",
+    "Description": "MT 117",
+    "Size": 4,
+    "Fields": {
+      "RCDC_STATUS_REGISTER_[HEADER]": {
+        "LOAD_LINE_CRISS_CROSS": "1,BITS,8",
+        "AC_FREQ_ERROR_LOAD_SIDE": "1,BITS,8",
+        "AC_FREQ_ERROR_LINE_SIDE": "1,BITS,8",
+        "CAPACITOR_CHARGE_STATUS": "2,BITS,8",
+        "AC_VOLTAGE_LOAD_SIDE": "1,BITS,8",
+        "SWITCH_POSITION_FAULT": "1,BITS,8",
+        "COMMAND_FAULT": "1,BITS,8"
+      },
+      "RCDC_STATE_REGISTER_[HEADER]": {
+        "ACTUAL_SWITCH_STATE": "1,BITS,8",
+        "COMMANDED_SWITCH_STATE": "1,BITS,8",
+        "AC_VOLTAGE_STATE": "2,BITS,8",
+        "EXTERNAL_AC_VOLTAGE": "1,BITS,8",
+        "ARM_FAULT": "1,BITS,8",
+        "CAPACITOR_FAULT": "1,BITS,8",
+        "FILLER": "1,BITS,8"
+      },
+      "RCDC_CHARGE_CAPACITOR_VOLT": "1,BYTE",
+      "FW_[HEADER]": {
+        "REVISION": "4,BITS,8",
+        "VERSION": "4,BITS,8"
+      }
+    }
+  },
+  "MT118": {
+    "ID": 2166,
+    "Name": "RCDC_SWITCH_OPERATION_TBL",
+    "Description": "MT 118",
+    "Size": 2,
+    "Fields": {
+      "RCDC_ARM_ENABLE_REGISTER_[HEADER]": {
+        "CLOSURE_MODE": "1,BITS,8",
+        "RESERVED": "1,BITS,8",
+        "CLOSURE_ARM": "1,BITS,8",
+        "OPEN_ARM": "2,BITS,8",
+        "AC_OVERRIDE": "1,BITS,8",
+        "CHRG_CAP_OVERRIDE": "1,BITS,8",
+        "FILLER": "1,BITS,8"
+      },
+      "RCDC_COMMAND_REGISTER_[HEADER]": {
+        "COMMAND": "7,BITS,8,ENUM",
+        "FAULT": "1,BITS,8"
+      }
+    }
+  },
+  "MT119": {
+    "ID": 2167,
+    "Name": "NETWORK_STATUS_DISPLAY_DATA_TBL",
+    "Description": "MT 119",
+    "Size": 48,
+    "Fields": {
+      "NETWORK_STATUS[0]": "6,ASCII",
+      "NETWORK_STATUS[1]": "6,ASCII",
+      "NETWORK_STATUS[2]": "6,ASCII",
+      "NETWORK_STATUS[3]": "6,ASCII",
+      "NETWORK_STATUS[4]": "6,ASCII",
+      "NETWORK_STATUS[5]": "6,ASCII",
+      "NETWORK_STATUS[6]": "6,ASCII",
+      "NETWORK_STATUS[7]": "6,ASCII"
+    }
+  }
+}

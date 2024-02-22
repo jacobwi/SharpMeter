@@ -1,0 +1,56 @@
+// Jacob William
+{
+  "MeterTypes": [ "GAS [0]", "WATER [1]", "ELECTRIC [2]", "DEV [3]" ],
+  "BOOLEAN_FLAGER": [ "TRUE", "FALSE" ],
+  "AccessLevel": [ "No Access [0]", "Customer [1]", "Read [2]", "Master [3]" ],
+
+  // ===============================================================
+  // Bits Enum
+  // ===============================================================
+
+  // ================================
+  // ST0
+  // ================================
+  "FILL": [ "Reserved" ],
+  "DATA_ORDER": [ "Little Endian", "Big Endian" ],
+  "CHAR_FORMAT": [ "Unassigned", "ISO 7-bit", "ISO Latin 1" ],
+  "MODEL_SELECT": [ "I/O Model" ],
+
+  "TM_FORMAT": [ "No Clock", "Clock with BSD", "Clock with UINT8", "Clock with UINT32" ],
+  "DATA_ACCESS_METHOD": [ "Full", "Full/Partial", "Full/Index", "Full/Partial/Index" ],
+  "ID_FORM": [ "String", "BCD" ],
+  "INT_FORMAT": [ "2s Complement", "1s Complement", "Sign/Magnitude" ],
+
+  "NI_FORMAT1": [ "FLOAT64", "FLOAT32", "FLOAT_CHAR12 (A STRING Number)", "FLOAT_CHAR6 (A STRING Number)", "INT32 (Implied decimal point between fourth and fifth digits from least significant digit. For example, 0.0001, is represented as 1)", "FIXED_BCD6", "FIXED_BCD4", "INT24", "INT32", "INT40", "INT48", "INT64", "FIXED_BCD8", "FLOAT_CHAR21 (A STRING Number)", "Reserved", "Reserved" ],
+  "NI_FORMAT2": [ "FLOAT64", "FLOAT32", "FLOAT_CHAR12 (A STRING Number)", "FLOAT_CHAR6 (A STRING Number)", "INT32 (Implied decimal point between fourth and fifth digits from least significant digit. For example, 0.0001, is represented as 1)", "FIXED_BCD6", "FIXED_BCD4", "INT24", "INT32", "INT40", "INT48", "INT64", "FIXED_BCD8", "FLOAT_CHAR21 (A STRING Number)", "Reserved", "Reserved" ],
+
+  // ================================
+  // ST2
+  // ================================
+  "E_FREQ": [ "DC", "25 Hz", "50 Hz", "50 or 60 Hz", "60 Hz", "400 Hz", "Reserved", "Unclassified" ],
+  "E_NO_OF_ELEMENTS": [ "None", "1 Element", "2 Elements", "2.5 Elements", "3 Elements", "6 Elements", "1.5 Element", "Reserved" ],
+  "E_BASE_TYPE": [ "None", "S-base", "A-base", "K-base", "IEC", "Switchboard", "Rackmount", "B-base", "P-base" ],
+  "E_ACCURACY_CLASS": [ "0" ],
+
+  "E_ELEMENTS_VOLTS": [ "None", "69.3", "72", "120", "208", "240", "277", "480", "120-277", "120-480", "347", "600", "Reserved", "Reserved", "Reserved", "Reserved" ],
+
+  "E_ED_SUPPLY_VOLTS": [ "Internal", "69.3 AC", "72 AC", "120 AC", "208 AC", "240 AC", "277 AC", "480 AC", "120-277 AC", "120-480 AC", "48 AC", "25 AC", "250 AC", "347 AC", "600 AC", "Reserved" ],
+
+  // ================================
+  // MT64
+  // ================================
+  "EQUATION": [ "[0] 1-Element 2W", "[1] 1-Element 3W", "[2] 2-Element 3W" ],
+  "LINE_FREQUENCY": [ "[0] 50 Hz", "[1] 60 Hz" ],
+  "PULSE_ENABLE": [ "[0] Disabled", "[1] Enabled" ],
+  "PULSE_TYPE": [ "[0] Energy", "[1] Quadergy" ],
+
+  // ================================
+  // MT66
+  // ================================
+  "TIME_BASE": [ "[0] Line", "[1] Crystal" ],
+
+  // ================================
+  // MT118
+  // ================================
+  "COMMAND": [ "[0] NONE", "[1] Close switch", "[2] Sample charge capaciter", "[3] Perform self-test", "[4] Open switch", "[5] Reset switch controller", "[6] Outage open", "[7] Update switch status" ]
+}

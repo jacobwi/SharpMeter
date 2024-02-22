@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32002.185
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpMeter", "SharpMeter\SharpMeter.csproj", "{8392AF6E-D200-456C-93AD-3A7A0B09BD83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8392AF6E-D200-456C-93AD-3A7A0B09BD83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8392AF6E-D200-456C-93AD-3A7A0B09BD83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8392AF6E-D200-456C-93AD-3A7A0B09BD83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8392AF6E-D200-456C-93AD-3A7A0B09BD83}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {910456BB-D923-45F2-87B6-2D317BFB8887}
+	EndGlobalSection
+EndGlobal
